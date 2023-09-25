@@ -1,0 +1,33 @@
+// COLORS
+$primary-color: #106c5c;
+$secondary-color: #c7d8cc;
+$tertiary-color: #597f79;
+
+// FONTSIZE
+$font-lg: 5rem;
+$font-md: 2rem;
+$font-sm: 1rem;
+
+@mixin margin-padding($padding) {
+    margin: 3px;
+    padding: $padding;
+}
+
+@mixin transition($color, $bacco) {
+    transition: color $color, background-color $bacco ;
+}
+
+@function increaseFontSize($size) {
+    @return $size * 2; 
+}
+
+.background-primary {
+    background-color: $tertiary-color;
+    color: $secondary-color;
+    text-align: center;
+}
+
+p {
+    @extend .background-primary;
+    font-size: increaseFontSize(1rem);
+}

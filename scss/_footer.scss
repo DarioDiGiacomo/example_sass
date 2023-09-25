@@ -1,0 +1,14 @@
+@use "global" as *;
+.footer {
+    @include margin-padding(3px);
+    h3 {
+    font-size: $font-md;
+    color: $primary-color;
+    text-align: center;
+    }
+    &:hover {
+    @include transition(0.5s, 1s );
+    color: $tertiary-color;
+    background-color: $secondary-color;
+    }
+}
